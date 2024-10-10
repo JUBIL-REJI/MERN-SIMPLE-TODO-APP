@@ -11,7 +11,7 @@ const Create = () => {
        window.location.reload()
       })
       .catch(err=>console.log(err))
-      alert('note is added')
+      
   }
 
 
