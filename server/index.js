@@ -14,22 +14,25 @@ app.get('/get',(req ,res)=>{
   .catch(err=>res.json(err))
 })
 
-app.delete('/delete/:id',(req,res)=>{
-  const {id} = req.params;
-  TodoModel.findByIdAndDelete({_id:id})
-  .then(result =>res.json(result))
-  .catch(err=>res.json(err))
-
-}
-
-)
+app.delete('/delete/:id', (req, res) => {
+  const { id } = req.params;
+  TodoModel.findByIdAndDelete(id)
+    .then(result => {
+      if (!result) {
+        return res.status(404).json({ error: 'Todo not found' });
+      }
+      res.json({ message: 'Todo deleted', result });
+    })
+    .catch(err => res.status(500).json({ error: 'Failed to delete todo', details: err }));
+});
 
 
 app.post('/add',(req,res) =>{
   const task = req.body.task;
-  
+  const dueDate = req.body.dueDate
   TodoModel.create({
-    task:task
+    task:task,
+    duedate:dueDate,
   }).then(res => res.json(result))
     .catch(err =>res.json(err))
 

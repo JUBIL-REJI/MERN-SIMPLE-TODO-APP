@@ -1,0 +1,73 @@
+body{
+  background-color: black;
+}
+.main{
+  color: greenyellow;
+}
+.formgroup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.title{
+  font-weight: bold;
+  font-size: larger;
+  font-family: serif;
+}
+.inputbar{
+  width: 400px;
+}
+.btn-submit{
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+.btn-submit:hover{
+  background-color: rgb(67, 154, 67);
+}
+.btn-submit:active{
+  background-color: green;
+}
+.task {
+  font-family: serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: greenyellow;
+}
+.line:hover{
+  width: 10px;
+  background-color: greenyellow;
+
+}
+.task-title {
+  font-family: serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: blue;
+}
+.cards{
+  padding: 12px;
+  background-color: rgb(156, 154, 154);
+}
+.check{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  margin: 8px 0 8px 0;
+  
+}
+.check-text{
+  color: brown;
+}
+.checkbox{
+  cursor: pointer;
+}
+.text-label{
+  font-weight: bold;
+  font-family: 'Courier New';
+  color: rgb(197, 45, 45);
+}
